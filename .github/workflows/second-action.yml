@@ -1,5 +1,10 @@
 name: Test workflow
-on: [push, workflow_dispatch]
+on:
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch:
+
 jobs:
   test:
     runs-on: ubuntu-latest
